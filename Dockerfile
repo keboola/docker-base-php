@@ -1,11 +1,11 @@
-#VERSION 1.0.1
 FROM keboola/base
 MAINTAINER Ondrej Hlavacek <ondrej.hlavacek@keboola.com>
+
+ENV APP_VERSION 1.0.1
 
 # Image setup
 WORKDIR /tmp
 RUN yum -y --enablerepo=epel,remi,remi-php55 install \
-	git \
 	php \
 	php-cli \
 	php-common \
