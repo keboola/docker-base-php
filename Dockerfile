@@ -5,7 +5,8 @@ ENV APP_VERSION 1.0.1
 
 # Image setup
 WORKDIR /tmp
-RUN yum -y --enablerepo=epel,remi,remi-php55 install \
+RUN yum -y update && \
+	yum -y --enablerepo=epel,remi,remi-php55 install \
 	php \
 	php-cli \
 	php-common \
